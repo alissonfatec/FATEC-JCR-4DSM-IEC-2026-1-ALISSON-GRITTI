@@ -1,0 +1,19 @@
+{
+  "name": "aula07",
+  "version": "1.0.0",
+  "description": "",
+  "main": "processamento.test.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint": "^10.2.1",
+    "jest": "^30.3.0"
+  }
+}

@@ -2,16 +2,16 @@ name: CI Pipeline - INPE
 
 on:
   push:
-    branches: [ main, feature/aula08-badges ]
+    branches: [main, feature/aula08-badges]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do Código
+      - name: Checkout do Codigo
         uses: actions/checkout@v4
 
       - name: Configurar Node.js
@@ -19,13 +19,13 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Instalar Dependências
-        run: npm ci
+      - name: Instalar Dependencias
+        run: npm install
 
-      - name: Executar Testes e Gerar Relatório (Exercício 2)
+      - name: Executar Testes e Gerar Relatorio
         run: npm run test:coverage
 
-      - name: Enviar Relatórios ao Codecov (Exercício 3 e 4)
+      - name: Enviar Relatorios ao Codecov
         uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: false
